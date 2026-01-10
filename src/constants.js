@@ -42,8 +42,6 @@ import OpenCV from "./assets/tech_logo/OpenCV.png";
 import dvc from "./assets/tech_logo/dvc.svg";
 import mlflow from "./assets/tech_logo/mlflow.png";
 
-
-
 // Experience Section Logo's
 // import webverseLogo from "./assets/company_logo/webverse_logo.png";
 // import agcLogo from "./assets/company_logo/agc_logo.png";
@@ -56,15 +54,11 @@ import hs from "./assets/education_logo/hs.png";
 import sec from "./assets/education_logo/sec.png";
 
 // Project Section Logo's
-import githubdetLogo from "./assets/work_logo/github_det.png";
-import csprepLogo from "./assets/work_logo/cs_prep.png";
-import movierecLogo from "./assets/work_logo/movie_rec.png";
-import taskremLogo from "./assets/work_logo/task_rem.png";
-import npmLogo from "./assets/work_logo/npm.png";
-import webverLogo from "./assets/work_logo/web_dig.png";
-import cmLogo from "./assets/work_logo/cm.png";
-import imagesearchLogo from "./assets/work_logo/image_search.png";
-import removebgLogo from "./assets/work_logo/remove_bg.png";
+import shortify from "./assets/work_logo/Shortify.png";
+import kidney from "./assets/work_logo/kidney.png";
+import movie from "./assets/work_logo/movie.png";
+import JobPortal from "./assets/work_logo/JobPortal.png";
+import AIFitnessApp from "./assets/work_logo/AIFitnessApp.png";
 
 export const SkillsInfo = [
   {
@@ -103,20 +97,20 @@ export const SkillsInfo = [
     ],
   },
   {
-  title: "AI / ML",
-  skills: [
-    { name: "NumPy", logo: NumPy },
-    { name: "Pandas", logo: Pandas },
-    { name: "Matplotlib", logo: Matplotlib },
-    { name: "Scikit-learn", logo: scikit },
-    { name: "PyTorch", logo: PyTorch },
-    { name: "TensorFlow", logo: TensorFlow },
-    { name: "LangChain", logo: Langchain },
-    { name: "OpenCV", logo: OpenCV },
-    { name: "MLflow", logo: mlflow },
-    { name: "DVC", logo: dvc },
-  ],
-},
+    title: "AI / ML",
+    skills: [
+      { name: "NumPy", logo: NumPy },
+      { name: "Pandas", logo: Pandas },
+      { name: "Matplotlib", logo: Matplotlib },
+      { name: "Scikit-learn", logo: scikit },
+      { name: "PyTorch", logo: PyTorch },
+      { name: "TensorFlow", logo: TensorFlow },
+      { name: "LangChain", logo: Langchain },
+      { name: "OpenCV", logo: OpenCV },
+      { name: "MLflow", logo: mlflow },
+      { name: "DVC", logo: dvc },
+    ],
+  },
 
   {
     title: "Tools",
@@ -131,11 +125,10 @@ export const SkillsInfo = [
       { name: "Jupyter Notebook", logo: jupyterLogo },
       { name: "Anaconda", logo: anacondaLogo },
       { name: "Google Colab", logo: colabLogo },
-      { name: "AWS", logo: awsLogo }, 
+      { name: "AWS", logo: awsLogo },
     ],
   },
 ];
-
 
 export const education = [
   {
@@ -176,109 +169,104 @@ export const education = [
   },
 ];
 
-
 export const projects = [
   {
     id: 0,
-    title: "GitHub Profile Detective",
+    title: "Job Portal (Microservice)",
     description:
-      "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
-    image: githubdetLogo,
-    tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-    github:
-      "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
-    webapp: "https://githubprofiledetective.netlify.app/",
+      "Built a large-scale job portal platform using Spring Boot, ReactJS, Redux, and Docker, with services for Auth, User, Profile, Job & Notification. Integrated Kafka, RabbitMQ, Feign, Redis, MongoDB, and MySQL for communication, caching, and persistence. Implemented JWT-based authentication, role-based",
+    image: JobPortal,
+    tags: [
+      "React",
+      "Spring Boot",
+      "MongoDB",
+      "MySQL",
+      "Eureka Server",
+      "Kafka",
+      "JWT",
+      "Role-based Auth",
+      "TailwindCSS",
+      "Spring Security",
+    ],
+    github: "https://github.com/sneharkive/JobPortal-NextRole",
+    webapp: "https://jobportalfrontend-4p43.onrender.com",
   },
   {
     id: 1,
-    title: "CS Prep",
-    description:
-      "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
-    image: csprepLogo,
+    title: "Kidney Disease Classification (MLOps Pipeline)",
+    description: "An end-to-end deep learning pipeline for kidney disease classification built using TensorFlow, MLflow, and DVC. The project includes training and inference pipelines with experiment tracking, model versioning, Dockerized deployment, and CI/CD on AWS, achieving 87% accuracy and a 0.88 F1-score.",
+    image: kidney,
     tags: [
-      "React JS",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "HTML",
-      "CSS",
-      "JavaScript",
+      "Python",
+      "TensorFlow",
+      "MLflow",
+      "DVC",
+      "Docker",
+      "AWS",
+      "Flask",
     ],
-    github: "https://github.com/codingmastr/CSPrep",
-    webapp: "https://csprep.netlify.app/",
+    github: "https://github.com/sneharkive/Kidney-Disease-Classification-DL",
+    webapp: "https://kidney-disease-classification-dl-1.onrender.com",
   },
   {
     id: 2,
-    title: "Movie Recommendation App",
+    title: "AI Fitness Tracker (Microservice)",
     description:
-      "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-    image: movierecLogo,
-    tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-    github: "https://github.com/codingmastr/Movie-Recommendation-App",
-    webapp: "https://movie-recommendation-app-jet.vercel.app/",
+      "Developed a fitness tracking application using a microservice architecture with Spring Boot, Spring Cloud, Eureka Server, API Gateway, and ReactJS. Designed four independent services—User, Activity, Suggestion, and Tracking. Enhanced with an AI module to deliver personalized activity suggestions and secure authentication using Spring Security and JWT.",
+    image: AIFitnessApp,
+    tags: [
+      "React",
+      "Spring Boot",
+      "Spring AI",
+      "MongoDB",
+      "MySQL",
+      "JWT",
+      "RabbitMQ",
+      "Eureka Server",
+      "TailwindCSS",
+      "Spring Security",
+    ],
+    github: "https://github.com/sneharkive/JobPortal-NextRole",
+    webapp: "https://jobportalfrontend-4p43.onrender.com",
   },
   {
     id: 3,
-    title: "Email Validator NPM Package",
-    description:
-      "An efficient and customizable NPM package for validating email addresses. Built using React.js and Node.js, it provides robust validation features to help developers ensure that email inputs meet required formats and standards.",
-    image: npmLogo,
-    tags: ["React JS", "Node.js", "NPM", "Validation"],
-    github: "https://github.com/codingmastr/cmtk-email-validator",
-    webapp: "https://www.npmjs.com/package/cmtk-email-validator",
+    title: "Movie Recommendation System",
+    description: "A machine learning–powered movie recommendation system built using scikit-learn, FastAPI, and Streamlit. The app provides personalized movie recommendations through a RESTful API, with an interactive Streamlit interface for real-time user interaction and predictions.",
+    image: movie,
+    tags: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+    ],
+    github: "https://github.com/sneharkive/MoviesRecSystemML/tree/main",
+    webapp: "https://moviesrecsystemml-79k7a3pxgkiysrt2nujymb.streamlit.app/",
   },
   {
     id: 4,
-    title: "Task Reminder Chrome Extension Tool",
+    title: "URL Shortener App",
     description:
-      "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
-    image: taskremLogo,
-    tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
-    github: "https://github.com/codingmastr/Task-Reminder-Tool",
-    webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
-  },
-  {
-    id: 5,
-    title: "Webverse Digital",
-    description:
-      "The official website for Webverse Digital, a creative digital marketing agency. Built using HTML, CSS, and JavaScript, it features visually appealing animations and a clean design to showcase the agency's services.",
-    image: webverLogo,
-    tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-    github: "https://github.com/codingmastr/Webverse-Digital",
-    webapp: "https://webversedigital.com/",
-  },
-  {
-    id: 6,
-    title: "Coding Master",
-    description:
-      "An ed-tech platform where users can access tech and coding-related blogs, notes, interview questions, e-books, and premium content with payment integration. Built with full-stack technologies for a seamless learning experience.",
-    image: cmLogo,
-    tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
-    github: "https://codingmasterweb.in/",
-    webapp: "https://codingmasterweb.in/",
-  },
-  {
-    id: 7,
-    title: "Image Search App",
-    description:
-      "A React.js-based image search application that allows users to search and download high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
-    image: imagesearchLogo,
-    tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
-    github: "https://github.com/codingmastr/Image-Search-App",
-    webapp: "https://imagsearch.netlify.app/",
-  },
-  {
-    id: 8,
-    title: "Image Background Remover",
-    description:
-      "An efficient background removal app built with React.js and API integration. Users can upload any image, remove the background, and download the transparent version for further use.",
-    image: removebgLogo,
-    tags: ["React JS", "API", "Image Processing", "HTML", "CSS", "Javascript"],
-    github: "https://github.com/codingmastr/Image-Background-Remover",
-    webapp: "https://removeyourbg.netlify.app/",
+      "A full-stack URL shortening app with JWT-based authentication, MySQL storage, and real-time link analytics displayed using interactive charts. Built with ReactJS for the frontend and Spring Boot for the backend, featuring responsive design with Tailwind CSS.",
+    image: shortify,
+    tags: [
+      "React",
+      "Spring Boot",
+      "Spring AI",
+      "MongoDB",
+      "MySQL",
+      "JWT",
+      "RabbitMQ",
+      "Eureka Server",
+      "TailwindCSS",
+      "Spring Security",
+    ],
+    github: "https://github.com/sneharkive/JobPortal-NextRole",
+    webapp: "https://jobportalfrontend-4p43.onrender.com",
   },
 ];
-
 
 // export const experiences = [
 //   {
@@ -328,4 +316,3 @@ export const projects = [
 //     skills: ["HTML", "CSS", "Javascript", "Bootstrap", "Figma", "Material UI"],
 //   },
 // ];
-

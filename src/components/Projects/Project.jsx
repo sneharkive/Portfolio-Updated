@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { projects } from "../../constants";
 
-const Work = () => {
+const Project = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleOpenModal = (project) => {
@@ -14,7 +14,7 @@ const Work = () => {
 
   return (
     <section
-      id="work"
+      id="project"
       className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
     >
       {/* Section Title */}
@@ -129,4 +129,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Project;
