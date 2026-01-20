@@ -67,7 +67,7 @@ const Project = () => {
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
+          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl max-h-[90vh] overflow-y-auto relative">
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
@@ -78,13 +78,16 @@ const Project = () => {
             </div>
 
             <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
+              <div className="w-full px-4">
+                <div className="w-full  rounded-xl bg-black">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
+
               <div className="lg:p-8 p-6">
                 <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
                   {selectedProject.title}
